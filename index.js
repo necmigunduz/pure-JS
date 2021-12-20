@@ -12,7 +12,7 @@ async function fetchData(){
                     <div class="card col-md-2 text-break fs-small m-1">
                         <img src=${product.image} alt="#" width="100" height="120" class="p-1 mx-auto my-1">
                         <p class="text-center">${product.name}</p>
-                        <button type='button' class='btn btn-success mt-auto mb-2' id='popup-button'/>Sepete ekle</button>
+                        <button type='button' class='btn btn-success mt-auto mb-2' id='modal-button'/>Sepete ekle</button>
                     </div>
                 `
             })
@@ -27,11 +27,20 @@ async function fetchData(){
             main.appendChild(container)
             row.insertAdjacentHTML("afterbegin", html)
             
-            document.querySelector("#popup-button").addEventListener("click", function(){
-                setTimeout(function(){
-                    document.querySelector("#popup-text").innerHTML = "Ürün sepetinize eklendi!"
-                }, 3000)
-            })
+            let modal = document.getElementById("myModal");
+            let button = document.getElementById("modal-button");
+            let span = document.getElementsByClassName("close")[0];
+            button.onclick = function() {
+                modal.style.display = "block";
+            }
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
         })
         .catch(error => {
             console.log(error)
