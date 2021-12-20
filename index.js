@@ -9,9 +9,9 @@ async function fetchData(){
             const html = products.map(product => {
                 return `
                     <div class="card col-md-2 text-break fs-small m-1">
-                        <img src=${product.image} alt="Girl in a jacket" width="100" height="120" class="p-1 mx-auto mb-1">
-                        <p class="mb-5">${product.name}</p>
-                        <button type='button' class='btn btn-success'>Sepete ekle</button>
+                        <img src=${product.image} alt="#" width="100" height="120" class="p-1 mx-auto my-1">
+                        <p class="text-center">${product.name}</p>
+                        <button type='button' class='btn btn-success mt-auto mb-2'>Sepete ekle</button>
                     </div>
                 `
             })
