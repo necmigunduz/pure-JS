@@ -1,3 +1,10 @@
 .fs-small {
     font-size: 12px;
 }
+
+.footer {
+    background: #262626;
+    color: lightyellow;
+    min-height: 30px;
+    text-align: center;
+}
