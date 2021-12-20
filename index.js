@@ -30,11 +30,13 @@ async function fetchData(){
             let modal = document.querySelector(".myModal");
             let buttons = document.getElementsByClassName("modal-button");
             let span = document.getElementsByClassName("close")[0];
+
             for(var i = 0; i < buttons.length; i++) {
                 buttons[i].onclick = function () {
                     modal.style.display = "block";
                 }
             }
+            
             span.onclick = function() {
                 modal.style.display = "block";
             }
