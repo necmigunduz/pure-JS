@@ -11,7 +11,7 @@ async function fetchData(){
                 return `
                     <div class="card col-md-2 text-break fs-small m-1">
                         <img src=${product.image} alt="#" width="100" height="120" class="p-1 mx-auto my-1">
-                        <p class="text-center">${product.name}</p>
+                        <p class="text-center"><a href="#">${product.name}</a></p>
                         <button type='button' class='btn btn-success mt-auto mb-2 modal-button'/>Sepete ekle</button>
                     </div>
                 `
