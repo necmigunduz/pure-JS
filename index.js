@@ -28,7 +28,9 @@ async function fetchData(){
             row.insertAdjacentHTML("afterbegin", html)
             
             document.querySelector("#popup-button").addEventListener("click", function(){
-                document.querySelector("#popup-text").innerHTML = "Ürün sepetinize eklendi!"
+                setTimeout(function(){
+                    document.querySelector("#popup-text").innerHTML = "Ürün sepetinize eklendi!"
+                }, 3000)
             })
         })
         .catch(error => {
